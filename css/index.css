@@ -126,10 +126,35 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+@font-face {
+  font-family: 'Heebo';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Heebo Medium'), local('Heebo-Medium'), url(https://fonts.gstatic.com/s/heebo/v5/NGS3v5_NC0k9P9kFbqRMkKs.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
+}
 html,
 body {
   height: 100%;
   width: 100%;
+  font-size: 62.5%;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Heebo', sans-serif;
+}
+p {
+  font-family: 'Roboto', sans-serif;
 }
 .cta-banner {
   height: 100%;
@@ -138,7 +163,46 @@ body {
   background-image: url('../imgs/lee-myungseong-y1XXWct5rBo-unsplash.jpg');
 }
 .cta-banner .opacity-layer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   height: 100%;
   width: 100%;
-  background-color: rgba(10, 10, 10, 0.7);
+  background-color: rgba(10, 10, 10, 0.85);
+}
+.cta-banner .opacity-layer img {
+  margin: 0 auto;
+}
+.cta-banner .opacity-layer h1 {
+  font-size: 12rem;
+  color: white;
+  text-align: center;
+}
+.cta-banner .opacity-layer h2 {
+  margin-top: 1.5%;
+  font-size: 5rem;
+  font-style: italic;
+  color: white;
+}
+.cta-banner .opacity-layer p {
+  margin-top: 5%;
+  width: 70%;
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+}
+.cta-banner .opacity-layer .join {
+  font-family: 'Heebo', sans-serif;
+  margin-top: 5%;
+  font-size: 6rem;
+  text-align: center;
+  background-color: #D9A404;
+  border-radius: 10px;
+  border: 5px solid black;
+  width: 250px;
+  height: 80px;
+  line-height: 80px;
+}
+.cta-banner .opacity-layer .join:hover {
+  cursor: pointer;
 }
