@@ -1,61 +1,118 @@
-.cta-banner {
-    height: 100%;
-    width: 100%;
+body {
+    background-image: url("../imgs/background.jpg");
     background-size: 100% 100%;
-    background-image: url('../imgs/lee-myungseong-y1XXWct5rBo-unsplash.jpg');
+    background-attachment: fixed;
+}
 
-    .opacity-layer {
+header {    
+    margin-top: 25px;
+    font-size: 2rem;
+    nav {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 100%;
+        justify-content: flex-end;
+        margin-right: 25px;
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    }
+}
+
+.cta-headline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 80px;
+
+    h1 {
+        font-size: 14rem;
+        text-align: center;
+    } // end h1
+
+    h2 {
+        font-size: 4rem;
+        text-align: center;
+        font-style: italic;
+        margin-bottom: 50px;
+    } // end h2 
+
+    .join-button {
+        height: 85px;
+        width: 420px;
+        line-height: 80px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 6rem;
+        background-color: orange;
+        border: 3px solid black;
+        border-radius: 15px;
+        box-shadow: 20px 20px 50px 15px black;
+
+        &:hover {
+            cursor: pointer;
+        } // end hover state for join button
+    } // end join button
+} // end cta-headline
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 100px;
+
+    h2 {
         width: 100%;
-        background-color: rgba(10, 10, 10, .85);
+        font-size: 6rem;
+        text-align: center;
+        margin-bottom: 50px;
+    } // end h2
+
+    .feature-card {
+        width: 25%;
+        background-color: rgba(36, 82, 52, .7);
+        border: 2px solid black;
+        border-radius: 15px 15px 0 0;
         
-        img {
-            margin: 0 auto;
-        } // end of logo img
-
-        h1 {
-            font-size: 12rem;
-            color: white;
+        h3 {
+            border-radius: 15px 15px 0 0;
+            background-color: rgba(243, 127, 11, .5);
+            padding: 15px 0;
             text-align: center;
-        } // end of h1
-
-        h2 {
-            margin-top: 1.5%;
-            font-size: 5rem;
-            font-style: italic;
-            color: white;
-
-        }
-
+            font-size: 4rem;
+            margin-bottom: 15px;
+            border-bottom: 2px solid black;
+            width: 100%;
+        } // end h3
+        
         p {
-            margin-top: 5%;
-            // border: 1px solid red;
-            width: 70%;
-            font-size: 3rem;
-            color: white;
+            padding: 15px 20px;
             text-align: center;
-        }
+            font-size: 2.5rem;
+        } // end p
+    } // end feature card
+} // end features
 
-        .join {
-            font-family: 'Heebo', sans-serif;
-            margin-top: 5%;
-            font-size: 6rem;
-            text-align: center;
-            background-color: #D9A404;
-            border-radius: 10px;
-            border: 5px solid black;
-            width: 250px;
-            height: 80px;
-            line-height: 80px;
-            
-            &:hover {
-                cursor: pointer;
-            } // end .join hover state
-        } // end .join button
+footer {
+    color: white;
+    width: 100%;
+    nav {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        a {
+            margin: 0 20px;
+            height: 25px;
+            width: 25px;
 
-    } // end of opacity-layer
-} // end of cta-banner
+            img {
+                width: 100%;
+                height: 100%;
+            } // end social media logos
+        } // end a
+    } // end nav
 
+    h5 {
+        font-size: 1.1rem;
+        text-align: center;    
+    } // end copyright text
+} // end footer
