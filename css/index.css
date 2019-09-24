@@ -84,7 +84,7 @@ p {
 }
 body {
   padding: 1rem;
-  background-color: #c4f2cf;
+  background-color: #f4f4f4;
 }
 @media screen and (max-width: 768px)  {
   body {
@@ -97,7 +97,7 @@ body {
   background-image: linear-gradient(rgba(51, 51, 51, 0.75), rgba(51, 51, 51, 0.75)), url("../imgs/background.jpg");
   background-size: cover;
   border-radius: 10px;
-  padding: 10rem 0;
+  padding: 10rem 5rem;
   margin-bottom: 1rem;
 }
 .header .logo-container {
@@ -142,24 +142,31 @@ body {
   border-radius: 10px;
   background-image: linear-gradient(rgba(200, 200, 200, 0.7), rgba(200, 200, 200, 0.7)), url(../imgs/features.jpg);
   background-size: cover;
-  padding-top: 6rem;
-  position: relative;
   margin-bottom: 1rem;
 }
-.features .features-title {
-  background-color: #f4f4f4;
-  color: black;
+.features .features-header {
+  padding: 5rem 3rem;
+  margin-bottom: 5rem;
+  background-color: #c4f2cf;
+  border-radius: 10px 10px 0px 0px;
   width: 100%;
+  border-top: 10px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 10px solid rgba(0, 0, 0, 0.2);
+}
+.features .features-header .features-title {
   font-size: 8rem;
   text-align: center;
+  margin-bottom: 5rem;
+  color: #333333;
+}
+.features .features-header .pitch {
+  color: #333333;
+  font-size: 3.5rem;
 }
 .features .feature-card-container {
-  position: absolute;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  top: 60%;
-  transform: translateY(-50%);
 }
 .features .feature-card-container .feature-card {
   display: flex;
@@ -233,9 +240,24 @@ body {
     margin: 5rem auto;
   }
 }
+.footer {
+  position: relative;
+}
 .footer .copyright-text {
   text-align: center;
   color: #333333;
+}
+.footer .social-icon-container {
+  position: absolute;
+  top: 0;
+  transform: translateY(-25%);
+  left: 90%;
+}
+.footer .social-icon-container .social-icon {
+  font-size: 3rem;
+  color: #333333;
+  text-decoration: none;
+  margin-left: 2.5rem;
 }
 .btn {
   display: block;
