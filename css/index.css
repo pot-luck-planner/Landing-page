@@ -63,14 +63,23 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
+@media screen and (max-width: 800px)  {
+  html {
+    font-size: 47%;
+  }
+}
 @media screen and (max-width: 500px)  {
   html {
     font-size: 32%;
   }
 }
+body {
+  background-color: #f4f4f4;
+  padding: 1rem;
+}
 @media screen and (max-width: 800px)  {
-  html {
-    font-size: 50%;
+  body {
+    padding: 0;
   }
 }
 h1,
@@ -78,25 +87,78 @@ h2,
 h3,
 h4,
 h5 {
-  color: #f4f4f4;
   font-family: 'Heebo', sans-serif;
   font-weight: 500;
 }
 a,
 p {
-  color: #f4f4f4;
   font-family: 'Roboto', sans-serif;
 }
-body {
-  padding: 1rem;
-  background-color: #f4f4f4;
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
-@media screen and (max-width: 500px)  {
-  body {
-    padding: 0;
+.footer .nav {
+  width: 30%;
+}
+.footer .nav a {
+  margin-right: 3rem;
+  color: #333333;
+  font-size: 1.5rem;
+}
+.footer .nav a:link,
+.footer .nav a:visited {
+  color: #333333;
+}
+.footer .social-icon-container {
+  display: flex;
+  justify-content: flex-end;
+}
+.footer .social-icon-container .social-icon {
+  font-size: 3rem;
+  color: #333333;
+  text-decoration: none;
+  margin-left: 2.5rem;
+}
+.footer .copyright-text {
+  width: 100%;
+  text-align: center;
+  color: #333333;
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 800px)  {
+  .footer {
+    display: flex;
+    position: static;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 5rem;
+  }
+  .footer .nav a {
+    font-size: 3rem;
+  }
+  .footer .copyright-text {
+    margin-top: 3rem;
+    order: 2;
+    width: 100%;
+  }
+  .footer .social-icon-container {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    order: 1;
+    position: inherit;
+  }
+  .footer .social-icon-container .social-icon {
+    font-size: 8rem;
   }
 }
-.header {
+.landing-container {
+  color: #f4f4f4;
+}
+.landing-header {
   min-height: 100vh;
   height: auto;
   width: 100%;
@@ -106,49 +168,45 @@ body {
   padding: 10rem 5rem;
   margin-bottom: 1rem;
 }
-.header .logo-container {
+.landing-header .logo-container {
   display: block;
   text-align: center;
   height: 300px;
 }
-.header .logo-container .logo {
+.landing-header .logo-container .logo {
   height: 100%;
 }
-.header .header-title {
+.landing-header .header-title {
   letter-spacing: 0.25rem;
   text-align: center;
 }
-.header .header-title .main-text {
+.landing-header .header-title .main-text {
   display: block;
   font-size: 10rem;
   animation: fromRight 1s;
 }
-.header .header-title .sub-text {
+.landing-header .header-title .sub-text {
   display: block;
   font-style: italic;
   font-size: 6rem;
   animation: fromLeft 1s;
 }
-.header .check-features {
+.landing-header .check-features {
   animation: fromBottom 1s 1s;
   animation-fill-mode: backwards;
 }
-@media screen and (max-width: 500px)  {
-  .header {
-    min-height: 100vh;
+@media screen and (max-width: 800px)  {
+  .landing-header {
+    min-height: 100vw;
     max-width: 100vw;
     border-radius: 0;
     margin-bottom: 0;
     height: auto;
   }
 }
-@media screen and (max-width: 800px)  {
-  .header {
-    min-height: 100vw;
-    max-width: 100vw;
-    border-radius: 0;
-    margin-bottom: 0;
-    height: auto;
+@media screen and (max-width: 500px)  {
+  .landing-header {
+    min-height: 100vh;
   }
 }
 .features {
@@ -163,20 +221,18 @@ body {
 .features .features-header {
   padding: 5rem 3rem;
   margin-bottom: 5rem;
-  background-color: #c4f2cf;
+  background-color: rgba(51, 51, 51, 0.75);
   border-radius: 10px 10px 0px 0px;
   width: 100%;
-  border-top: 10px solid rgba(0, 0, 0, 0.2);
-  border-bottom: 10px solid rgba(0, 0, 0, 0.2);
+  border-top: 10px solid rgba(51, 51, 51, 0.75);
+  border-bottom: 10px solid rgba(51, 51, 51, 0.75);
 }
 .features .features-header .features-title {
   font-size: 8rem;
   text-align: center;
   margin-bottom: 5rem;
-  color: #333333;
 }
 .features .features-header .pitch {
-  color: #333333;
   font-size: 3.5rem;
 }
 .features .feature-card-container {
@@ -193,6 +249,7 @@ body {
   border-radius: 10px;
   transition: all 1s;
   transform: scale(1);
+  box-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.9);
 }
 .features .feature-card-container .feature-card .feature-name-wrapper {
   display: flex;
@@ -222,48 +279,14 @@ body {
 .features .feature-card-container .join-now {
   margin: 10rem 30rem;
 }
-@media screen and (max-width: 500px)  {
-  .features {
-    border-radius: 0;
-    height: auto;
-    position: static;
-    min-height: 100vh;
-  }
-  .features .features-title {
-    margin-bottom: 6rem;
-  }
-  .features .feature-card-container {
-    position: static;
-    flex-direction: column;
-    justify-content: space-between;
-    transform: none;
-  }
-  .features .feature-card-container .feature-card {
-    width: 100%;
-    margin-bottom: 10rem;
-  }
-  .features .feature-card-container .feature-card .feature-name-wrapper .feature-name {
-    font-size: 5rem;
-  }
-  .features .feature-card-container .feature-card .feature-desc {
-    font-size: 4rem;
-    line-height: 5rem;
-  }
-  .features .feature-card-container .feature-card:hover {
-    transform: none;
-  }
-  .features .feature-card-container .join-now {
-    margin: 5rem auto;
-  }
-}
 @media screen and (max-width: 800px)  {
   .features {
     border-radius: 0;
     height: auto;
-    position: static;
     min-height: 100vw;
   }
-  .features .features-title {
+  .features .features-header {
+    border-radius: 0;
     margin-bottom: 6rem;
   }
   .features .feature-card-container {
@@ -290,69 +313,9 @@ body {
     margin: 5rem auto;
   }
 }
-.footer {
-  position: relative;
-}
-.footer .copyright-text {
-  text-align: center;
-  color: #333333;
-}
-.footer .social-icon-container {
-  position: absolute;
-  top: 0;
-  transform: translateY(-25%);
-  left: 90%;
-}
-.footer .social-icon-container .social-icon {
-  font-size: 3rem;
-  color: #333333;
-  text-decoration: none;
-  margin-left: 2.5rem;
-}
 @media screen and (max-width: 500px)  {
-  .footer {
-    display: flex;
-    position: static;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 5rem;
-  }
-  .footer .copyright-text {
-    order: 2;
-    width: 100%;
-  }
-  .footer .social-icon-container {
-    display: flex;
-    justify-content: space-between;
-    width: 50%;
-    order: 1;
-    position: inherit;
-  }
-  .footer .social-icon-container .social-icon {
-    font-size: 8rem;
-  }
-}
-@media screen and (max-width: 800px)  {
-  .footer {
-    display: flex;
-    position: static;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 5rem;
-  }
-  .footer .copyright-text {
-    order: 2;
-    width: 100%;
-  }
-  .footer .social-icon-container {
-    display: flex;
-    justify-content: space-between;
-    width: 50%;
-    order: 1;
-    position: inherit;
-  }
-  .footer .social-icon-container .social-icon {
-    font-size: 8rem;
+  .features {
+    min-height: 100vh;
   }
 }
 .btn {
@@ -380,4 +343,74 @@ body {
   transition: all 0.2s;
   transform: translateY(0rem);
   box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.9);
+}
+.about-container {
+  position: absolute;
+  left: 26rem;
+  margin-bottom: 1rem;
+  color: #333333;
+}
+.about-container a,
+.about-container p {
+  line-height: 2.5rem;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-image: linear-gradient(rgba(51, 51, 51, 0.75), rgba(51, 51, 51, 0.75)), url("../imgs/side.jpg");
+  background-size: 100% 100%;
+  width: 25rem;
+  color: #f4f4f4;
+  padding: 1rem;
+}
+.sidebar * {
+  color: inherit !important;
+}
+.sidebar .footer .nav {
+  width: 100%;
+}
+.about-header {
+  letter-spacing: 0.25rem;
+  font-size: 7rem;
+  text-align: center;
+}
+.about-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  color: #f4f4f4;
+}
+.about-cards .member-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+  margin: 5rem 5rem;
+  padding: 1rem 0;
+  background-image: linear-gradient(to bottom right, black, #4b4b4b);
+  border: 2px solid #2fbf45;
+  border-radius: 10px;
+  box-shadow: 1.5rem 2rem 2rem rgba(50, 50, 50, 0.9);
+}
+.about-cards .member-card .member-img-container {
+  height: 300px;
+  width: 70%;
+  margin: 1rem 0;
+}
+.about-cards .member-card .member-img-container .member-img {
+  height: 100%;
+  width: 100%;
+}
+.about-cards .member-card .member-name {
+  font-size: 3rem;
+}
+.about-cards .member-card .member-title {
+  font-size: 2rem;
+  font-style: italic;
+}
+.about-cards .member-card .member-blurb {
+  margin: 1rem 5rem;
+  font-size: 1.8rem;
 }
