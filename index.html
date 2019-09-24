@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
     <title>Potluck Planner</title>    
 </head>
@@ -15,11 +16,42 @@
             <span class="sub-text">Bringing order to the chaos of planning potlucks.</span>
         </h1>
 
-        <a class="check-features btn"href="#">Check Us Out!</a>
+        <a class="check-features btn"href="#features">Check Us Out!</a>
     </header>
 
-    <section class="features">
-        <!-- test -->
+    <section class="features" id="features">
+        <h2 class="features-title">Features:</h2>
+
+        <div class="feature-card-container">
+            <div class="feature-card"> <!-- start of feature card 1-->
+                <div class="feature-name-wrapper">
+                    <i class="material-icons">group_add</i>
+                    <h3 class="feature-name">Flexible Organizing</h3>
+                </div>
+                <p class="feature-desc">Create events, invite friends, and adjust dates and locations. Guests will be able to see these changes in real time!</p>
+            </div> <!-- end of feature card 1-->
+            
+            <div class="feature-card"> <!-- start of feature card 2-->
+                <div class="feature-name-wrapper">
+                    <i class="material-icons">fastfood</i>
+                    <h3 class="feature-name">What to Eat?</h3>
+                </div>
+                <p class="feature-desc">Use our list feature to provide guests with a display of what items are still needed at the event.</p>
+            </div> <!-- end of feature card 2-->
+            
+            <div class="feature-card"> <!-- start of feature card 3-->
+                <div class="feature-name-wrapper">
+                    <i class="material-icons">notifications_active</i>
+                    <h3 class="feature-name">No Forgetting!</h3>
+                </div>
+                <p class="feature-desc">Never miss important dates again. We can push reminders to you and your guest list to confirm attendance!</p>
+            </div> <!-- end of feature card 3-->
+            <a class="join-now btn"href="#">Join Now!</a>
+        </div>
     </section>
+
+    <footer class="footer">
+        <h5 class="copyright-text">Potluck Planner Inc. &copy;</h5>
+    </footer>
 </body>
 </html>
