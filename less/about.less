@@ -1,6 +1,6 @@
 .about-container {
     position: absolute;
-    right: 26rem;
+    right: 40rem;
     margin-bottom: 1rem;
 
     color: @coal;
@@ -14,6 +14,7 @@
         flex-direction: column;
         position: static;
         margin-bottom: 0;
+        font-size: 50%;
     }
 }
 
@@ -131,9 +132,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    color: @snow;
+    color: @coal;
 
     .member-card {
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -143,49 +145,76 @@
         margin: 5rem 5rem;
         padding: 1rem 0;
         // background-color: @coal;
-        background-image: linear-gradient(to bottom right, black, rgb(75,75,75));
-        border: 2px solid @mustard;
-        border-radius: 10px;
-        box-shadow: 1.5rem 2rem 2rem rgba(50, 50, 50, .9); 
-        
+        background-image: white;
+        border: 2px solid @coalalpha;
+        box-shadow: 0 1rem 2rem rgba(50, 50, 50, .9); 
+        transition: 1s;
+
+        &:hover {
+            cursor: pointer;
+        }        
+
         .member-img-container {
-            height: 300px;
-            width: 70%;
-            margin: 1rem 0;
-            // border-radius: 10px;
-            
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border: 1px solid black;
+            height: 92%;
+            width: 92%;
+            opacity: 1;
+
             .member-img {
-                // border-radius: 10px;
                 height: 100%;
                 width: 100%;
             }
         }
-        .member-name {
-            font-size: 3rem;
-        }
+        .member-details {
+            opacity: 0;
+            position: absolute;
+            margin-top: 40%;
+            height: 92%;
+            width: 92%;
+            transform: rotateY(180deg);
+            
+            .member-name {
+                text-align:center;
+                font-size: 3rem;
+            }
+    
+            .member-title {
+                text-align: center;
+                font-size: 2rem;
+                font-style: italic;
+            }
+    
+            .member-blurb {
+                margin: 1rem 5rem;
+                font-size: 1.8rem;
+            }
 
-        .member-title {
-            font-size: 2rem;
-            font-style: italic;
-        }
-
-        .member-blurb {
-            margin: 1rem 5rem;
-            font-size: 1.8rem;
+            @media @tablet {
+                margin-top: 25%;
+                
+                .member-name {
+                    font-size: 6rem;
+                }
+                .member-title {
+                    font-size: 5rem;
+                }
+                .member-blurb {
+                    line-height: 5rem;
+                    font-size: 4rem;
+                }
+            }
         }
     }
 
     @media @tablet {    
         order: 2;
         .member-card {
-            min-height: 50vw;
+            min-height: 600px;
             width: 80%;
-        }
-    }
-
-    @media @phone {
-        .member-card {
-            min-height: 50vh;
         }
     }
 }
