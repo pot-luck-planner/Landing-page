@@ -4,56 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/14c7e00dca.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
-    <title>Potluck Planner</title>
+    <title>Potluck Planner</title>   
 </head>
 <body>
-    <header> <!-- start header -->
-        <!-- <nav>
-            <a href="#">about</a>
-        </nav> -->
-    </header> <!-- end header -->
-
-    <section class="cta-headline"> <!-- start cta-headline -->
-        <img src="imgs/logo.png" alt="Potluck Planner Logo">
-        <h1>Potluck Planner</h1>
-        <h2>Bringing Order to the Chaos of Planning Potlucks</h1>
-        <div class="join-button">Join Us Today!</div>
-    </section> <!-- end cta-headline -->
-
-    <section class="features"> <!-- start of main features -->
-        <h2>Popular Features</h2>
-        <div class="feature-card"> <!-- start of feature card 1-->
-            <h3>Flexible Organizing!</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam cumque delectus, eaque ipsum id, atque repudiandae doloremque, facilis similique itaque voluptates laboriosam possimus accusantium? In deleniti sequi nihil qui omnis.</p>
-        </div> <!-- end of feature card 1-->
-
-        <div class="feature-card"> <!-- start of feature card 2-->
-            <h3>Choose Your Dishes!</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque sequi odio fugiat ipsum esse, exercitationem temporibus nulla placeat perferendis assumenda mollitia voluptates perspiciatis debitis vero quos ex iusto illum quaerat?</p>
-        </div> <!-- end of feature card 2-->
-
-        <div class="feature-card"> <!-- start of feature card 3-->
-            <h3>Never Forget!</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A architecto obcaecati maxime! Maiores, facere dolores sunt veniam ut aperiam dignissimos officia inventore facilis, pariatur eum nesciunt deleniti dolorem odit accusamus!</p>
-        </div> <!-- end of feature card 3-->
-    </section> <!-- end of features -->
-
-
-    <footer> <!-- start of footer -->
-        <!-- ADD SOCIAL MEDIA LINKS HERE-->
-        <nav>
-            <a href="https://www.facebook.com/">
-                <img src="imgs/fb.png" alt="facebook icon">
-            </a>
-            <a href="https://www.twitter.com/">
-                <img src="imgs/twitter.png" alt="twitter icon">
-            </a>
-            <a href="https://www.instagram.com/">
-                <img src="imgs/ig.png" alt="instagram icon">
-            </a>
-        </nav>
-        <h5>Copyright 2019 Potluck Planner Inc. All Rights Reserved.</h5>
-    </footer> <!-- end footer -->
+    <div class="landing-container">
+        <header class="landing-header">
+            <a class="logo-container"><img class="logo" src="imgs/logo.png" alt="logo"></a>
+            <h1 class="header-title">
+                <span class="main-text">Potluck Planner</span>
+                <span class="sub-text">Bringing order to the chaos of planning potlucks.</span>
+            </h1>
+    
+            <a class="check-features"href="#features">Check Us Out!</a>
+    
+        </header>
+    
+        <section class="features" id="features">
+            <!-- <div class="features-header">
+                <h2 class="features-title">Features:</h2>
+                <p class="pitch">If you have ever tried to organize a potluck through text messages, online to-do lists or spreadsheets you get why this app is important. In the world of social gatherings and potlucks the "Potluck Planner" is king. This is your place for all things pot luck.</p>
+            </div> -->
+            <div class="feature-card-container">
+                <div class="feature-card"> <!-- start of feature card 1-->
+                    <div class="feature-name-wrapper">
+                        <i class="material-icons">group_add</i>
+                        <h3 class="feature-name">Flexible Organizing</h3>
+                    </div>
+                    <p class="feature-desc">Create events, invite friends, and adjust dates and locations. Guests will be able to see these changes in real time!</p>
+                </div> <!-- end of feature card 1-->
+                
+                <div class="feature-card"> <!-- start of feature card 2-->
+                    <div class="feature-name-wrapper">
+                        <i class="material-icons">fastfood</i>
+                        <h3 class="feature-name">What to Eat?</h3>
+                    </div>
+                    <p class="feature-desc">Use our list feature to provide guests with a display of what items are still needed at the event.</p>
+                </div> <!-- end of feature card 2-->
+                
+                <div class="feature-card"> <!-- start of feature card 3-->
+                    <div class="feature-name-wrapper">
+                        <i class="material-icons">notifications_active</i>
+                        <h3 class="feature-name">No Forgetting!</h3>
+                    </div>
+                    <p class="feature-desc">Never miss important dates again. We can push reminders to you and your guest list to confirm attendance!</p>
+                </div> <!-- end of feature card 3-->
+                <a class="join-now"href="#">Join Now!</a>
+            </div>
+        </section>
+    
+        <footer class="footer">
+            <nav class="nav">
+                <a href="#">home</a>
+                <a href="about.html">about</a>
+            </nav>
+            <div class=social-icon-container>
+                <a class="social-icon" href="#">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+                <a class="social-icon" href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a class="social-icon" href="#">
+                    <i class="fab fa-twitter-square"></i>
+                </a>
+            </div>
+            <h5 class="copyright-text">Potluck Planner Inc. &copy;</h5>
+        </footer>
+    </div>
 </body>
 </html>

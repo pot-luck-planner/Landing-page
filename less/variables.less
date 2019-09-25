@@ -1,0 +1,87 @@
+// Primary Palette
+@warm: rgba(216,87,13, 1);
+@mustard: rgba(216,163,4, 1);
+@green: rgba(47,191,69, 1);
+@paleblue: rgba(196,242,207, 1);
+@faintblue: rgba(239,242,242, 1);
+
+// Secondary Palette
+@coal: rgb(51, 51, 51);
+@coalalpha: rgba(51, 51, 51,.75);
+@snow: rgb(244, 244, 244);
+@snowalpha: rgba(200, 200, 200, .7);
+
+@phone: ~"screen and (max-width: 500px) ";
+@tablet: ~"screen and (max-width: 800px) ";
+
+// animations
+@keyframes fromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(10rem);
+    }
+
+    80% {
+        transform: translateY(-.5rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes fromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+
+    80% {
+        transform: translateX(-1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes fromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    80% {
+        transform: translateX(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes spin {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateY(360deg); 
+    }
+
+
+}

@@ -1,15 +1,102 @@
 @import url('https://fonts.googleapis.com/css?family=Heebo:500|Roboto&display=swap');
 
-html, body {
-    width: 100%;
-    color: white;
+html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
+
+    @media @tablet {
+        font-size: 47%;
+    }
+
+    @media @phone {
+        font-size: 32%;
+    }
+
+}
+
+body {
+    background-color: @snow;
+    padding: 1rem;
+
+    @media @tablet {
+        padding: 0;
+    }
 }
 
 h1, h2, h3, h4, h5 {
     font-family: 'Heebo', sans-serif;
+    font-weight: 500;
 }
 
-p {
+a, p {
     font-family: 'Roboto', sans-serif;
 }
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    .nav {
+        width: 30%;
+        a {
+            margin-right: 3rem;
+            color: @coal;
+            font-size: 1.5rem;
+            &:link, &:visited {
+                color: @coal;
+            }
+        }
+    }
+
+    .social-icon-container {
+        display: flex;
+        justify-content: flex-end;
+
+        .social-icon {
+            font-size: 3rem;
+            color: @coal;
+            text-decoration: none;
+            margin-left: 2.5rem;
+        }
+    }
+
+    .copyright-text {
+        width: 100%;
+        text-align: center;
+        color: @coal;
+        font-size: 1.5rem;
+    }
+
+    @media @tablet {
+        display: flex;
+        position: static;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 5rem;
+
+        .nav {
+            a {
+                font-size: 3rem;
+            }
+        }
+
+        .copyright-text {
+            margin-top: 3rem;
+            order: 2;
+            width: 100%;
+        }
+        .social-icon-container {
+            display: flex;
+            justify-content: space-between;
+            width: 50%;
+            order: 1;
+            position: inherit;
+
+            .social-icon {
+                font-size: 8rem;
+            }
+        }
+    }
+}
+
