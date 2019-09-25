@@ -419,7 +419,7 @@ p {
   background-size: 100% 100%;
   width: 40rem;
   color: #f4f4f4;
-  padding: 1rem;
+  padding: 2rem;
 }
 .sidebar * {
   color: inherit !important;
@@ -460,7 +460,7 @@ p {
   transform: translate(0);
   position: absolute;
   margin-top: 0;
-  left: 1rem;
+  left: 2rem;
 }
 .sidebar .contact-form .send-form:hover {
   transition: all 0.2s;
@@ -546,7 +546,6 @@ p {
   min-height: 600px;
   margin: 5rem 5rem;
   padding: 1rem 0;
-  background-image: white;
   border: 2px solid rgba(51, 51, 51, 0.75);
   box-shadow: 0 1rem 2rem rgba(50, 50, 50, 0.9);
   animation: spin 1s;
@@ -561,7 +560,6 @@ p {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 1px solid black;
   height: 70%;
   width: 92%;
   opacity: 1;
@@ -574,7 +572,6 @@ p {
   opacity: 0;
   position: absolute;
   padding-top: 40%;
-  background-color: #333333;
   color: #f4f4f4;
   height: 92%;
   width: 92%;
@@ -590,12 +587,12 @@ p {
   font-style: italic;
 }
 .about-cards .member-card .member-details .member-blurb {
-  margin: 1rem 5rem;
+  margin: 4rem 5rem;
   font-size: 1.8rem;
 }
 @media screen and (max-width: 800px)  {
   .about-cards .member-card .member-details {
-    margin-top: 25%;
+    padding-top: 25%;
   }
   .about-cards .member-card .member-details .member-name {
     font-size: 6rem;

@@ -6,11 +6,13 @@ Array.from(document.getElementsByClassName("member-card")).forEach(card => {
         
         switch (imgOpacity){
             case "1":
+                card.style.background = "black";
                 img.style.opacity = "0";
                 desc.style.opacity = "1";
                 card.style.transform = "rotateY(180deg)";
                 break;
             case "0":
+                card.style.background = "white";
                 img.style.opacity = "1";
                 desc.style.opacity = "0";
                 card.style.transform = "rotateY(0deg)";
