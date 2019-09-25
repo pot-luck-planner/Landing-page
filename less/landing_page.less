@@ -41,6 +41,7 @@
 
 
     .check-features {
+        .btn(45rem, 6rem);
         animation: fromBottom 1s 1s;
         animation-fill-mode: backwards;
     }
@@ -139,11 +140,12 @@
 
             &:hover {
                 transition: all 1s;
-                transform: scale(1.1);
+                transform: scale(1.05);
             }
         }
 
         .join-now {
+            .btn(45rem, 6rem);
             margin: 10rem 30rem;
         }
         
@@ -195,32 +197,3 @@
     }
 } // end features
 
-.btn {
-    display: block;
-    margin: 0 auto;
-    width: 45rem;
-    text-align: center;
-    margin-top: 5rem;
-    text-decoration: none;
-    font-size: 6rem;
-    font-weight: bold;
-    border-radius: 2rem;
-    color: rgb(26,26,26);
-    background-image: linear-gradient(to top left, @warm, @mustard);
-    box-shadow: .5rem 1rem 2rem rgba(0, 0, 0, .9); 
-    transition: all .2s;
-    transform: translate(0);
-
-    &:hover {
-        transition: all .2s;
-        transform: translateY(-.5rem);
-        box-shadow: .5rem 2rem 2rem rgba(0, 0, 0, .5); 
-    }
-    
-    &:active {
-        transition: all .2s;
-        transform: translateY(0rem);
-        box-shadow: .5rem .5rem 2rem rgba(0, 0, 0, .9);    
-    }
-}
-    

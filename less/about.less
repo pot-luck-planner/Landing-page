@@ -1,21 +1,30 @@
 .about-container {
     position: absolute;
-    left: 26rem;
+    right: 26rem;
     margin-bottom: 1rem;
-    * {
-        // border: 1px solid red;
-    }
+
     color: @coal;
 
     a,p {
         line-height: 2.5rem;
     }
+
+    @media @tablet {
+        display: flex;
+        flex-direction: column;
+        position: static;
+        margin-bottom: 0;
+    }
 }
+
 
 .sidebar {
     position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     top: 0;
-    left: 0;
+    right: 0;
     height: 100vh;
     background-image: linear-gradient(@coalalpha,@coalalpha), url("../imgs/side.jpg");
     background-size: 100% 100%;
@@ -27,18 +36,95 @@
         color: inherit !important;
     }
 
-    .footer {
-        .nav {
-            width: 100%;
+    .contact-form {
+        margin-top: 10%;
+        font-size: 2rem;
+
+        .contact-title {
+            margin-bottom: 4rem;
+        }
+        .form-line {
+            margin-bottom: 1.8rem;
+            input, select, textarea {
+                width: 22rem;
+                font-size: 1.6rem;
+                color: @coal !important;
+            }
+        }
+
+        .send-form {
+            .btn(10rem, 2rem);
+            position: absolute;
+            margin-top: 0;
+            left: 1rem;
         }
     }
 
+    .footer {
+        .nav {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+
+            a {
+                font-size: 1.3rem;
+                margin-right: 0;
+            }
+        }
+        .social-icon-container {
+            margin: 1rem 0;
+            justify-content: space-around;
+            width: 100%;
+
+            .social-icon {
+                margin-left: 0;
+            }
+        }
+    }
+
+    @media @tablet {
+        position: static;
+        width: 100%;
+        height: 25vw;
+        min-height: 25vw;
+        order: 3;
+        padding: 0;
+
+        .contact-form {
+            display: none;
+        }
+
+        .footer {
+            .nav {
+                a {
+                    font-size: 4rem;
+                    text-decoration: none;
+                }
+            }
+            .social-icon-container {
+                margin: 4rem 0;
+            }
+        }
+    }
+
+    @media @phone {
+        height: 25vh;
+        min-height: 25vh;
+    }
 }
 
 .about-header {
     letter-spacing: .25rem;
     font-size: 7rem;
     text-align: center;
+
+    .main-text {
+        animation: fadeIn 2s;
+        animation-fill-mode: backwards;
+    }
+    @media @tablet {
+        order: 1;
+    }
 }
 
 .about-cards {
@@ -51,12 +137,14 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 20%;
+        width: 30%;
+        height: 50vh;
+        min-height: 50vh;
         margin: 5rem 5rem;
         padding: 1rem 0;
         // background-color: @coal;
         background-image: linear-gradient(to bottom right, black, rgb(75,75,75));
-        border: 2px solid @green;
+        border: 2px solid @mustard;
         border-radius: 10px;
         box-shadow: 1.5rem 2rem 2rem rgba(50, 50, 50, .9); 
         
@@ -84,6 +172,20 @@
         .member-blurb {
             margin: 1rem 5rem;
             font-size: 1.8rem;
+        }
+    }
+
+    @media @tablet {    
+        order: 2;
+        .member-card {
+            min-height: 50vw;
+            width: 80%;
+        }
+    }
+
+    @media @phone {
+        .member-card {
+            min-height: 50vh;
         }
     }
 }
