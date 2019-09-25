@@ -1,6 +1,6 @@
 .about-container {
     position: absolute;
-    right: 40rem;
+    right: 41rem;
     margin-bottom: 1rem;
 
     color: @coal;
@@ -29,7 +29,7 @@
     height: 100vh;
     background-image: linear-gradient(@coalalpha,@coalalpha), url("../imgs/side.jpg");
     background-size: 100% 100%;
-    width: 25rem;
+    width: 40rem;
     color: @snow;
     padding: 1rem;
 
@@ -47,14 +47,14 @@
         .form-line {
             margin-bottom: 1.8rem;
             input, select, textarea {
-                width: 22rem;
+                width: 35rem;
                 font-size: 1.6rem;
                 color: @coal !important;
             }
         }
 
         .send-form {
-            .btn(10rem, 2rem);
+            .btn(10rem, 2rem, 0);
             position: absolute;
             margin-top: 0;
             left: 1rem;
@@ -139,15 +139,18 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 30%;
+        width: 35%;
+        min-width: 300px;
         height: 50vh;
-        min-height: 50vh;
+        min-height: 600px;
         margin: 5rem 5rem;
         padding: 1rem 0;
         // background-color: @coal;
         background-image: white;
         border: 2px solid @coalalpha;
         box-shadow: 0 1rem 2rem rgba(50, 50, 50, .9); 
+        animation: spin 1s;
+        animation-fill-mode: backwards;
         transition: 1s;
 
         &:hover {
@@ -156,11 +159,11 @@
 
         .member-img-container {
             position: absolute;
-            top: 50%;
+            top: 40%;
             left: 50%;
             transform: translate(-50%,-50%);
             border: 1px solid black;
-            height: 92%;
+            height: 70%;
             width: 92%;
             opacity: 1;
 
@@ -172,7 +175,10 @@
         .member-details {
             opacity: 0;
             position: absolute;
-            margin-top: 40%;
+            padding-top: 40%;
+            // margin-top: 40%;
+            background-color: @coal;
+            color: @snow;
             height: 92%;
             width: 92%;
             transform: rotateY(180deg);

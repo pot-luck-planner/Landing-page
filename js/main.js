@@ -16,7 +16,6 @@ Array.from(document.getElementsByClassName("member-card")).forEach(card => {
                 card.style.transform = "rotateY(0deg)";
                 break;
         }
-
     }
 })
   

@@ -45,6 +45,15 @@
     opacity: 1;
   }
 }
+@keyframes spin {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: rotateY(360deg);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -205,6 +214,8 @@ p {
   width: 45rem;
   text-align: center;
   margin-top: 5rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
   text-decoration: none;
   font-size: 6rem;
   font-weight: bold;
@@ -249,6 +260,7 @@ p {
   background-image: linear-gradient(rgba(200, 200, 200, 0.7), rgba(200, 200, 200, 0.7)), url(../imgs/features.jpg);
   background-size: cover;
   margin-bottom: 1rem;
+  padding-top: 10%;
 }
 .features .features-header {
   padding: 5rem 3rem;
@@ -275,7 +287,7 @@ p {
 .features .feature-card-container .feature-card {
   display: flex;
   flex-direction: column;
-  width: 20%;
+  width: 25%;
   background-color: #333333;
   border: 8px solid #d8a304;
   border-radius: 10px;
@@ -314,6 +326,8 @@ p {
   width: 45rem;
   text-align: center;
   margin-top: 5rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
   text-decoration: none;
   font-size: 6rem;
   font-weight: bold;
@@ -376,7 +390,7 @@ p {
 }
 .about-container {
   position: absolute;
-  right: 40rem;
+  right: 41rem;
   margin-bottom: 1rem;
   color: #333333;
 }
@@ -403,7 +417,7 @@ p {
   height: 100vh;
   background-image: linear-gradient(rgba(51, 51, 51, 0.75), rgba(51, 51, 51, 0.75)), url("../imgs/side.jpg");
   background-size: 100% 100%;
-  width: 25rem;
+  width: 40rem;
   color: #f4f4f4;
   padding: 1rem;
 }
@@ -423,7 +437,7 @@ p {
 .sidebar .contact-form .form-line input,
 .sidebar .contact-form .form-line select,
 .sidebar .contact-form .form-line textarea {
-  width: 22rem;
+  width: 35rem;
   font-size: 1.6rem;
   color: #333333 !important;
 }
@@ -433,6 +447,8 @@ p {
   width: 10rem;
   text-align: center;
   margin-top: 5rem;
+  padding-top: 0;
+  padding-bottom: 0;
   text-decoration: none;
   font-size: 2rem;
   font-weight: bold;
@@ -524,14 +540,17 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 30%;
+  width: 35%;
+  min-width: 300px;
   height: 50vh;
-  min-height: 50vh;
+  min-height: 600px;
   margin: 5rem 5rem;
   padding: 1rem 0;
   background-image: white;
   border: 2px solid rgba(51, 51, 51, 0.75);
   box-shadow: 0 1rem 2rem rgba(50, 50, 50, 0.9);
+  animation: spin 1s;
+  animation-fill-mode: backwards;
   transition: 1s;
 }
 .about-cards .member-card:hover {
@@ -539,11 +558,11 @@ p {
 }
 .about-cards .member-card .member-img-container {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   border: 1px solid black;
-  height: 92%;
+  height: 70%;
   width: 92%;
   opacity: 1;
 }
@@ -554,7 +573,9 @@ p {
 .about-cards .member-card .member-details {
   opacity: 0;
   position: absolute;
-  margin-top: 40%;
+  padding-top: 40%;
+  background-color: #333333;
+  color: #f4f4f4;
   height: 92%;
   width: 92%;
   transform: rotateY(180deg);
