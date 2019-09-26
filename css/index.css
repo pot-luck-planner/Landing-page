@@ -260,7 +260,6 @@ p {
   background-image: linear-gradient(rgba(200, 200, 200, 0.7), rgba(200, 200, 200, 0.7)), url(../imgs/features.jpg);
   background-size: cover;
   margin-bottom: 1rem;
-  padding-top: 10%;
 }
 .features .features-header {
   padding: 5rem 3rem;
