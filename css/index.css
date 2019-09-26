@@ -592,17 +592,17 @@ p {
 }
 @media screen and (max-width: 800px)  {
   .about-cards .member-card .member-details {
-    padding-top: 25%;
+    padding-top: 15%;
   }
   .about-cards .member-card .member-details .member-name {
-    font-size: 6rem;
+    font-size: 4rem;
   }
   .about-cards .member-card .member-details .member-title {
-    font-size: 5rem;
+    font-size: 3.5rem;
   }
   .about-cards .member-card .member-details .member-blurb {
     line-height: 5rem;
-    font-size: 4rem;
+    font-size: 3rem;
   }
 }
 @media screen and (max-width: 800px)  {
